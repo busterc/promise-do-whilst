@@ -43,6 +43,26 @@ promiseDoWhilst(() => {
 
 ```
 
+## API
+
+### promiseDoWhilst(action, condition)
+
+Executes `action` repeatedly while `condition` returns `true` and then resolves the promise. Rejects if `action` returns a promise that rejects or if an error is thrown anywhere.
+
+#### action
+
+Type: `function`
+
+Action to run for each iteration.
+
+You can return a promise and it will be handled.
+
+#### condition
+
+Type: `function`
+
+Should return a boolean of whether to continue.
+
 ## License
 
 ISC © [Buster Collings]()
