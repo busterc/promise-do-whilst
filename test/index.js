@@ -25,4 +25,16 @@ describe('promise-do-whilst', function () {
       done();
     });
   });
+
+  it('should pass the result of "action" to "condition"', function (done) {
+    let count = 0;
+    promiseDoWhilst(() => {
+      count++;
+    }, (counter) => {
+      return counter === -1;
+    }).then(() => {
+      assert(count === 1, 'did not "do" only once');
+      done();
+    });
+  });
 });
