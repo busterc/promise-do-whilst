@@ -30,7 +30,9 @@ describe('promise-do-whilst', function () {
     let count = 0;
     promiseDoWhilst(() => {
       count++;
+      return count;
     }, (counter) => {
+      assert(typeof counter === 'number', 'did not pass the "action" result');
       return counter === -1;
     }).then(() => {
       assert(count === 1, 'did not "do" only once');
