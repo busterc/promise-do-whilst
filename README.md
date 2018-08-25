@@ -1,4 +1,7 @@
 # promise-do-whilst [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/busterc/promise-do-whilst.svg)](https://greenkeeper.io/)
+
 > Calls a function repeatedly while a condition returns true and then resolves the promise
 
 - See Also
